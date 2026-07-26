@@ -1,6 +1,6 @@
 cask "nightowl" do
-  version "1.11.1"
-  sha256 "2ffa3beb49f59f94970f127ee0fa719fcd984a737d04793c8ae385f6f587ced3"
+  version "1.12.0"
+  sha256 "4fb7ef5110177274c8a39a3219ca0a577c254123174c8d3356b4ddff4f4b2dfe"
 
   url "https://github.com/taufiqxr/NightOwl/releases/download/v#{version}/NightOwl-#{version}.zip"
   name "NightOwl"
