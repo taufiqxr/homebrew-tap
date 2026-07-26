@@ -18,10 +18,13 @@ cask "nightowl" do
 
   caveats <<~EOS
     NightOwl is ad-hoc signed, not notarized (no paid Apple developer
-    account). If macOS blocks the first launch, either right-click
-    NightOwl.app -> Open once, or install with:
+    account), so this download is quarantined and macOS will block the
+    first launch. Either right-click NightOwl.app -> Open once, or clear
+    the flag:
 
-      brew install --cask --no-quarantine taufiqxr/tap/nightowl
+      xattr -dr com.apple.quarantine /Applications/NightOwl.app
+
+    (Homebrew removed --no-quarantine in 6.0, with no replacement.)
 
     Mode changes ask for your admin password: pmset disablesleep is a
     root-level power switch. What runs as root is documented here:

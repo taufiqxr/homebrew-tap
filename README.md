@@ -10,13 +10,21 @@ no external display needed**.
 brew install --cask taufiqxr/tap/nightowl
 ```
 
-NightOwl is ad-hoc signed (not notarized), so if macOS blocks the first
-launch, right-click NightOwl.app → Open once — or skip the quarantine
-flag at install time:
+NightOwl is ad-hoc signed (not notarized), so Homebrew's download is
+quarantined and macOS blocks the first launch. Either right-click
+NightOwl.app → Open once, or clear the flag afterwards:
 
 ```bash
-brew install --cask --no-quarantine taufiqxr/tap/nightowl
+xattr -dr com.apple.quarantine /Applications/NightOwl.app
 ```
+
+Homebrew removed `--no-quarantine` in 6.0 (deprecated in 5.0) with no
+replacement, so this is a post-install step now rather than an install
+flag. Homebrew also plans to
+[end support for casks that fail Gatekeeper](https://github.com/Homebrew/brew/issues/20755)
+on 2026-09-01; until NightOwl is notarized, the
+[`.pkg` installer](https://github.com/taufiqxr/NightOwl/releases) is the
+more durable option.
 
 ## What's in the tap
 
