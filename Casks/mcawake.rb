@@ -1,6 +1,6 @@
 cask "mcawake" do
-  version "1.12.0"
-  sha256 "4fb7ef5110177274c8a39a3219ca0a577c254123174c8d3356b4ddff4f4b2dfe"
+  version "2.0.0"
+  sha256 "edf7408c8213fcfefec00bee65e86845951a8cdf22ff9c439d7ffd796ed36813"
 
   url "https://github.com/taufiqxr/McAwake/releases/download/v#{version}/McAwake-#{version}.zip"
   name "McAwake"
